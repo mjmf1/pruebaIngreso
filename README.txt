@@ -60,7 +60,7 @@ Requisitos Previos
 PostgreSQL (https://www.postgresql.org/)
 Un cliente SQL como DBeaver (https://dbeaver.io/)
 Configuración de la Base de Datos
-Crea una base de datos PostgreSQL y las tablas necesarias ejecutando los comandos SQL proporcionados en database_model.sql.
+Crea una base de datos PostgreSQL y las tablas necesarias ejecutando los comandos SQL proporcionados en database_model.sql .
 Ejecución
 Abre DBeaver o tu cliente SQL preferido.
 Conéctate a tu base de datos PostgreSQL.

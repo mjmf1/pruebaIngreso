@@ -1,3 +1,4 @@
+-- Ejecutar primero todos los CREATE TABLE statements
 
 CREATE TABLE Usuarios (
     id SERIAL PRIMARY KEY,
@@ -54,3 +55,20 @@ CREATE TABLE Reviews (
     FOREIGN KEY (video_id) REFERENCES Videos(id)
 );
 
+-- Ejecutar después todos los INSERT statements
+
+INSERT INTO Usuarios (nombre, email, contraseña) VALUES ('Juan Pérez', 'juan@example.com', 'password123');
+
+INSERT INTO Usuarios (nombre, email, contraseña) VALUES ('María García', 'maria@example.com', 'password456');
+
+INSERT INTO Autores (usuario_id, biografía) VALUES (1, 'Autor de vídeos técnicos.');
+
+INSERT INTO Colaboradores (usuario_id, rol) VALUES (2, 'Editor');
+
+INSERT INTO Videos (titulo, descripcion, url, autor_id) VALUES ('Cómo programar en JavaScript', 'Tutorial de JavaScript para principiantes', 'http://example.com/js-tutorial', 1);
+
+INSERT INTO Videos_Colaboradores (video_id, colaborador_id) VALUES (1, 1);
+
+INSERT INTO Comentarios (contenido, usuario_id, video_id) VALUES ('Muy buen tutorial, gracias!', 2, 1);
+
+INSERT INTO Reviews (rating, contenido, usuario_id, video_id) VALUES (5, 'Excelente tutorial!', 2, 1);
